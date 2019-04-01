@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性选择器</title>
+    <style type="text/css">
+        label[for]{
+            color:red;
+            font-size: 20px;
+        }
+
+        label[for="pwd"]{
+            color:yellow;
+        }
+
+        /*以。。。开头*/
+        label[for^="vip"] {
+            font-size: 50px;
+            color: red;
+        }
+
+        /*以。。。结尾*/
+        label[for$="p2"] {
+            font-size: 20px;
+            color: green;
+        }
+
+        label[for*='ser']{
+            color:goldenrod;
+
+        }
+
+        label[for~='user']{
+            color:pink;
+
+        }
+
+        input[type="text"]{
+            background-color: aquamarine;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <!--属性选择器通常在表单控件中 使用 比较频繁-->
+    <div class="box">
+        <form action="">
+            <label for="user">用户名</label>
+            <input type="text" name="" id="user">
+            <label for="pwd">密码：</label>
+            <label for="vip1">VIP1</label>
+            <label for="vip2">VIP2</label>
+            <label for="user2">用户名2</label>
+            <label for="user3">用户名3</label>
+            <label for="user4">用户名4</label>
+        </form>
+    </div>
+</body>
+</html>
