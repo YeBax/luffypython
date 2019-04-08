@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>权重深入</title>
+    <style type="text/css">
+        p{
+            color:red;
+            font-size: 30px;
+        }
+
+        .spe1{
+            color:yellow !important;
+            font-size: 40px;
+        }
+
+        .spe2{
+            color:green;
+            font-size: 10px;
+        }
+
+        ul{
+            color:blue;
+        }
+
+        .list{
+            color:greenyellow !important;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!--!important 设置权重为无限大
+            不影响继承来的权重，只影响权重的元素
+        -->
+        <p class="spe1 spe2">颜色1</p>
+        <p class="spe2 spe1">颜色2</p>
+    </div>
+
+    <div class="list">
+        <ul>
+            <li>这是一个li列表</li>
+        </ul>
+    </div>
+</body>
+</html>

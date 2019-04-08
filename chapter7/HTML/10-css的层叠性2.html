@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>层叠性2</title>
+    <style type="text/css">
+
+
+        #box1 #box2 p{
+            color:yellow;
+        }
+
+        #box2 .wrap3 p{
+            color:red;
+        }
+
+        div div #box3 p{
+            color:purple;
+        }
+
+        div.wrap1 div.wrap2 div.wrap3 p{
+            color:blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box1" class="wrap1">
+        <div id="box2" class="wrap2">
+            <div id="box3" class="wrap3">
+                <p>这是什么颜色啊？</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
