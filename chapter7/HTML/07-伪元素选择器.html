@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪元素选择器</title>
+    <style>
+        /*设置第一个首字母的样式*/
+        p:first-letter{
+            color:red;
+            font-size: 30px;
+        }
+
+        /*在。。。之前添加内容  这个属性 使用不是很频繁
+        使用此伪元素选择器一定要结合 content属性*/
+        p:before{
+            content: 'yebax';
+        }
+
+        /*在。。。之火 使用非常频繁 通常与赞美后面要讲到的布局 有很大的关联（清除浮动） */
+        p:after{
+            content:'~_~';
+            color:yellowgreen;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        第一个段落
+    </p>
+
+
+</body>
+</html>
