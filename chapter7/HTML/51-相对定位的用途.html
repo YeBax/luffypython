@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>相对定位的用途</title>
+    <style type="text/css">
+        *{
+            padding:0;
+            margin:0;
+        }
+
+        .nav{
+            width: 960px;
+            /*height: 40px;*/
+            overflow: hidden;
+            margin: 100px auto 0;
+            background-color: purple;
+
+            /*圆角*/
+            border-radius: 10px;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        .nav ul li{
+            float: left;
+            width: 160px;
+            height: 40px;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        /*a标签除外，不继承父元素的color*/
+        .nav ul li.xiaoming{
+            position: relative;
+            top: 40px;
+            left: 30px;
+        }
+        .nav ul li a{
+            display: block;
+            width: 160px;
+            height: 40px;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-family: "sans-serif";
+        }
+
+        .nav ul li a:hover{
+            background-color: red;
+            font-size: 30px;
+
+        }
+    </style>
+</head>
+<body>
+    <!--因为相对定位有坑，占着茅房不拉屎，恶心人，所以我们一般不要使用相对定位来做压盖效果。
+    在页面中，效果作用小，就两个作用：
+        1.微调元素位置
+        2.做绝对定位的参考（父相子绝），之后的绝对定位会讲-->
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="#">网站导航</a>
+            </li>
+            <li class="xiaoming">
+                <a href="#">网站导航</a>
+            </li>
+            <li>
+                <a href="#">网站导航</a>
+            </li>
+            <li>
+                <a href="#">网站导航</a>
+            </li>
+            <li>
+                <a href="#">网站导航</a>
+            </li>
+            <li>
+                <a href="#">网站导航</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

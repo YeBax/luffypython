@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        var arr =[1,2,3,4,5];
+        var a = arr.toString();
+        var b = arr.toLocaleString();
+        console.log(a);
+        console.log(b);
+        */
+
+        /*
+        var person1 ={
+            toLocaleString: function () {
+                return '哈哈哈哈';
+            },
+            toString:function () {
+                return '呵呵呵呵';
+            }
+        };
+
+        var person2 ={
+            toLocaleString: function () {
+                return '隔壁老王';
+            },
+            toString:function () {
+                return '隔壁老李';
+            }
+        };
+
+        var people = [person1, person2];
+        console.log(people);
+        console.log(people.toString());
+        console.log(people.toLocaleString());
+        */
+
+        var colors = ['red', 'blue', 'green'];
+        var a = colors.join('|');
+        console.log(a);
+
+        // 栈（lifo : last in first out）方法 队列方法
+        // push() 往数组的最后一项添加内容
+        var newlength = colors.push('purple');
+        console.log(newlength);
+        console.log(colors);
+
+        // pop() 从数组末尾删除最后一项
+        var lastItem = colors.pop();
+        console.log(lastItem);
+        console.log(colors);
+
+        // 队列 fifo 先进先出 shift() unshift()
+        newlength = colors.unshift('yellow');
+        console.log(colors);
+        var firstItemcolor = colors.shift();
+        console.log(firstItemcolor);
+        console.log(colors);
+
+        var values = [0, 3, 2, 16, 15, 10];
+        // 数组倒序
+        values.reverse();
+        console.log(values);
+
+        // sort() 排序升序 或者 降序
+        values.sort();
+        console.log(values);
+
+        function compare1(a,b) {
+            // a 位于 b 之前
+            /*if(a<b) {
+                return -1;
+            }else if(a>b){
+                return 1;
+            }else{
+                return 0;
+            }
+            */
+            return a-b;
+        }
+
+        function compare2(a,b) {
+            // a 位于 b 之前
+            /*if(a<b) {
+                return 1;
+            }else if(a>b){
+                return -1;
+            }else{
+                return 0;
+            }*/
+            return b-a;
+        }
+
+        values.sort(compare1); //升序
+        console.log(values);
+
+        values.sort(compare2); //降序
+        console.log(values);
+
+
+
+    </script>
+
+</body>
+</html>

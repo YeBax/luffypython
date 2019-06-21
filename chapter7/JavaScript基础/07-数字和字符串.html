@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        var a = "hello" + 123;
+        alert(a);
+
+        var b = '10' + '33';
+
+        //隐式转换  数值转字符串
+        var num = 234;
+        var myStr = num + "";
+        alert(typeof myStr);
+
+        // 字符串转数值
+        var myNum = Number(myStr);
+        alert(typeof myNum);
+
+        // 数值转字符串
+        var myStr2 = myNum.toString();
+        alert(typeof myStr2);
+
+        var n = '21313fhks';
+        var a1 = Number(n);
+        alert(a1);//NaN  Not a number
+    </script>
+</head>
+<body>
+
+</body>
+</html>

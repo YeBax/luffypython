@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>z-index</title>
+    <style type="text/css">
+        *{
+            padding:0;
+            margin:0;
+        }
+
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: relative;
+            top: 30px;
+            left: 40px;
+            z-index: 3;
+        }
+
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            position: relative;
+            z-index: 2;
+
+
+        }
+
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            float: left;
+            margin-left: 20px;
+            margin-top: -30px;
+            z-index: 5;
+        }
+
+    </style>
+</head>
+<body>
+    <!--
+        z-index
+        1.z-index 值表示谁压着谁，数值大的压盖住数值小的
+        2.只有定位了的元素，才能有z-index，也就是说，不管是相对定位，绝对定位还是固定地位，都可以使用z-index
+        而浮动元素不能使用。
+        3.z-index值没有单位，就是一个正整数，默认值：0
+        4.如果大家都没有z-index值，或者z-index值一样，那么谁写再HTML后面，谁在上面压着别人，定位了元素，永远压住没有定位的元素。
+        5.从父现象：父亲送了，儿子再牛逼也没用
+    -->
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+
+</body>
+</html>
