@@ -6,7 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/NewFtp/server/core" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/NewFtp/server/conf" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.6.6 (C:\Python36\python.exe)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.6.2 (C:\Python36\python.exe)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TestRunnerService">

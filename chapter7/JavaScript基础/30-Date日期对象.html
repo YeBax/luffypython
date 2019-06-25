@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // UTC
+        // Date日期对象
+//        var now = new Date();
+//        console.log(now);
+//        var xma = new Date('December 25,1995 13:30:00');
+//        console.log(xma);
+//        var xma1 = new Date(1995,0,25);
+//        console.log(xma1);
+//        var xma2 = new Date(1995,5,25,14,30,0);
+//        console.log(xma2);
+
+        //常用方法
+        var now = new Date();
+        console.log(now.getDate()); // 获取月份的第几天(1~31)
+        console.log(now.getMonth()); // 获取月份(0~11) 0 一月  11 十二月
+        console.log(now.getFullYear()); // 获取年份
+        console.log(now.getDay()); // 获取 一个星期中的第几天 （0~6）  0星期天  6 星期六
+        console.log(now.getHours()); // 获取 小时 (0~23)
+        console.log(now.getMinutes()); // 获取 分钟 (0~59)
+        console.log(now.getSeconds()); // 获取 秒 (0~59)
+
+
+        // 日期格式化方法
+        console.log(now.toDateString());    // 星期 月 日 年
+        console.log(now.toTimeString());    // 时 份 秒 时区
+
+        //常用
+        console.log(now.toLocaleDateString());    // 星期 月 日 年  2019/6/25
+        console.log(now.toLocaleTimeString());    // 下午11:51:07
+        console.log(now.toLocaleString());    // 2019/6/25 下午11:52:06
+
+        // 不常用
+        console.log(now.toUTCString());    // Tue, 25 Jun 2019 15:52:25 GMT
+
+
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var str = '123135.16346';
+        var str1 = '12313asdasd5.16346';
+        // 转化整型
+        console.log(parseInt(str));
+        console.log(parseFloat(str));
+        console.log(typeof parseFloat(str));
+        console.log(Number(str));
+        console.log(Number(str1)); //NaN
+        var a = Number(str1);
+        console.log(isNaN(a));
+
+        var num = 123123.932;
+        // 强制类型装换
+        console.log(num.toString());
+        console.log(typeof num.toString());
+        console.log(String(num));
+
+        // 隐式转换
+        console.log('' + num);
+        console.log(''.concat(num));
+
+        console.log(num.toFixed(2)); //保留小数点位数的转换，保留2位小数点
+        console.log(Number(num.toFixed(2)));
+    </script>
+
+</body>
+</html>
