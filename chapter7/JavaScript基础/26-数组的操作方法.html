@@ -6,7 +6,32 @@
 </head>
 <body>
     <script type="text/javascript">
+        // 操作方法 concat（）  slice（）  splice（）
 
+//        1.concat  数组合并
+        var colors=['red','bule'];
+        var newColors=colors.concat('grenn');
+        newColors=newColors.concat({name:"z"});
+        console.log(newColors);
+
+//        2.slice() 将当前数组中的一个或者多个向创建一个新数组
+//        newColors = newColors.slice(1);
+        newColors = newColors.slice(-2,-1);
+        console.log(newColors);
+
+//        3.splice() 删除 插入 替换
+//        3.1 删除
+        var names = ["张三","李四", "a", "tom", "fuck"];
+        names.splice(0,2);
+        console.log(names);
+
+//        3.2 插入
+        names.splice(1,0,"jack",'lili');
+        console.log(names);
+
+//        3.3 替换
+        names.splice(1,1,'xiaodaidai');
+        console.log(names);
 
     </script>
 
