@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <form>
+        <input type="text" name="user">
+        <input type="password" name="pwd">
+        <input type="submit">
+    </form>
+
+    <script type="text/javascript">
+        // 2秒之后跳转到 外部的web网页
+        setTimeout(function () {
+//            location.href = 'http://www.baidu.com';  //有历史记录 跳转
+//            location.replace( 'http://www.baidu.com')  //无历史记录 跳转
+            location.reload(); // 重载
+        },2000)
+    </script>
+
+
+</body>
+</html>

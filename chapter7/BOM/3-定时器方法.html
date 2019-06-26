@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+        // 延迟性的操作
+//        window.setTimeout(function () {
+//            console.log('hahaha')
+//        },2000);
+//        console.log('后面的小呆');
+        var num = 0;
+        var timer = null;
+
+        timer = setInterval(function () {
+            num ++;
+            if (num>5){
+                clearInterval(timer);
+                return;
+            }
+            console.log('周期执行！'+ num);
+        },1000)
+
+    </script>
+
+
+</body>
+</html>

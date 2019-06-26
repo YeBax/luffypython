@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math对象</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        // match
+
+        // 方法 min() max()
+        var max=Math.max(3,45,3,434,65,4);
+        var min=Math.min(3,45,3,434,65,4);
+
+        var arr = [1,2,3,34,2,45,56,5];
+        var max1 = Math.max.apply(null,arr);
+        var min1 = Math.min.apply(null,arr);
+        console.log(max1);
+        console.log(min1);
+
+        //保留
+        var num=23.4;
+        console.log(Math.ceil(num)); //24 往上
+        console.log(Math.floor(num)); //23 往下
+        console.log(Math.round(num)); //23 标准的四舍五入
+
+        // 随机数 random() 0<= random <1
+        console.log(Math.random());
+
+
+        // 1.获取min到max之间的整数(1~100)
+        function random(max, min) {
+            return Math.floor(Math.random() * (max-min) + min);
+        }
+        console.log(random(1,100));
+
+
+        // 2.获取随机颜色 rgb(0~255,0~255,0~255)
+        function randomColor() {
+            var r = random(0,256);
+            var g = random(0,256);
+            var b = random(0,256);
+            // 模板字符串 ``
+            var result = `rgb(${r},${g},${b})`;
+            return result;
+        }
+        var rc = randomColor();
+        console.log(rc);
+        document.body.style.backgroundColor = rc;
+
+        //3.随机验证码 四位 数字+字母（大写） 65Yz
+        function createCode() {
+            // 设置默认的空的字符串
+            var code = '';
+
+            // 设置长度
+            var codeLength = 4;
+            var randomCode = [0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R', 'S','T','U','V','W','X','Y','Z'];
+            for(var i  = 0; i < codeLength; i++){
+				// 设置随机范围 0~36
+				var index = random(0,36);
+				code +=  randomCode[index];
+			}
+			return code;
+        }
+        var code = createCode();
+        console.log(code);
+        document.write(`<h1>随机验证码：${code}</h1>`)
+
+
+    </script>
+
+</body>
+</html>
