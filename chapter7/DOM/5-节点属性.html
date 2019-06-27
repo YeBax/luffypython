@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>节点属性</title>
+</head>
+<body>
+    <div id="box" title="我是文本">
+        我是一个文本节点
+        <!--注释-->
+    </div>
+
+    <script type="text/javascript">
+        // 1.元素节点
+        var oDiv = document.getElementById('box');
+        console.log(oDiv.nodeName + '|' + oDiv.nodeValue + '|' + oDiv.nodeType);
+
+//        2.获取属性节点
+        console.log(oDiv.attributes);
+        var atrrNode = oDiv.attributes[0];
+        console.log(atrrNode.nodeName + '|' + atrrNode.nodeValue + '|' + atrrNode.nodeType);
+
+         //3.获取文本节点
+        var textNode = oDiv.childNodes[0];
+        console.log(textNode.nodeName + '|' + textNode.nodeValue + '|' + textNode.nodeType);
+
+        var commentNode = oDiv.childNodes[1];
+        console.log(commentNode.nodeName + '|' + commentNode.nodeValue + '|' + commentNode.nodeType);
+    </script>
+
+</body>
+</html>

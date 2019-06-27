@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>节点兑现给的其他常用属性</title>
+</head>
+<body>
+    <div>我是上一个兄弟</div><div id="father"><p> aaaa </p><p> bbbb </p><p> cccc </p></div><div class="sibling">我是下一个兄弟</div>
+
+    <script type="text/javascript">
+        var oFather = document.getElementById('father');
+        console.log(oFather.childNodes);
+        console.log(oFather.childNodes[0].nodeType);
+        console.log(oFather.firstChild);
+        console.log(oFather.lastChild);
+
+        console.log(oFather.childNodes[oFather.childNodes.length - 1]);
+
+        console.log(oFather.parentNode);
+        console.log(oFather.nextSibling);
+        console.log(oFather.previousSibling);
+
+    </script>
+
+</body>
+</html>
