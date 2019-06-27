@@ -4,12 +4,33 @@
     <meta charset="UTF-8">
     <title>动态操作样式</title>
     <style type="text/css">
+        .highLight{
+			background-color: black;
+			color: white;
+			width: 250px;
+			height: 250px;
+			line-height: 250px;
+			text-align: center;
+			font-size: 30px;
+		}
     </style>
 </head>
 <body>
+    <p id="box">aaaaaaa</p>
     <script type="text/javascript">
+        //nodeObj.style
+        var pare = document.getElementById('box');
+       /*
+       1.直接操作样式属性  优先级最高
+       console.log(pare.style);
+        pare.style.color = 'white';
+        pare.style.backgroundColor = 'black';
+        pare.style.width = '200px';
+        pare.style.height = '200px';
+        pare.style.fontSize = '30px';*/
 
-
+       // 通过控制属性的类名来控制样式   开发中最常使用这种方式
+       pare.setAttribute('class', 'highLight')
 
     </script>
 
