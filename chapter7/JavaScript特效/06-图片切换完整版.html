@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片切换完整版</title>
+    <style type="text/css">
+       *{
+           margin:0;
+           padding:0;
+       }
+
+        #box{
+            border: 1px solid #cccccc;
+            width: 540px;
+            height: 70px;
+            padding-top: 450px;
+            background: url("images/a01.jpeg") no-repeat;
+        }
+
+        #box ul li{
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box">
+        <ul>
+			<li class="item">
+				<img src="images/a01.jpeg" height="40">
+			</li>
+			<li class="item">
+				<img src="images/a02.jpeg" height="40">
+			</li>
+			<li class="item">
+				<img src="images/a03.jpeg" height="40">
+			</li>
+			<li class="item">
+				<img src="images/a04.jpeg" height="40">
+			</li>
+			<li class="item">
+				<img src="images/a05.jpeg" height="40">
+			</li>
+		</ul>
+    </div>
+    <script type="text/javascript">
+        //1.获取事件源
+        function $(id){
+            return typeof id === 'string' ? document.getElementById(id) : null;
+        }
+
+        var items = document.getElementsByClassName('item');
+        for(var i = 0; i<items.length; i++){
+            var item = items[i];
+			item.id = i + 1;
+			console.log(item.id);
+            items[i].onmouseover = function () {
+				$('box').style.background = `url('images/a0${this.id}.jpeg') no-repeat`;
+            }
+		}
+
+    </script>
+
+</body>
+</html>
