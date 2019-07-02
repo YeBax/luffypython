@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件</title>
+    <style type="text/css">
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script type="text/javascript">
+        // 1.找到触发的事件对象
+        var oDiv = document.getElementById('box');
+        // 2.事件
+        oDiv.onmouseover = function () {
+             // 3.事件处理程序
+            this.style.backgroundColor='green';
+        };
+
+        oDiv.onmouseout = function () {
+            this.style.backgroundColor='blue';
+        }
+    </script>
+
+</body>
+</html>
