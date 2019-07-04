@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传图片验证</title>
+    <style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+
+	</style>
+</head>
+<body>
+    <label for="file">上传图片格式验证：</label>
+    <input type="file" name="" id="file">
+    <script type="text/javascript">
+        // jpg png gif jpeg
+        window.onload = function () {
+            //1.获取对象
+            var file = document.getElementById('file');
+            //2.监听图片选择的变化
+            file.onchange = function () {
+                //2.1获取上传的图片路径
+                var path = this.value; // f:\1.git
+                var loc = path.lastIndexOf('.');
+                console.log(loc);
+
+                //2.3截图 文件路径名的后缀
+                var suffix = path.substr(loc);
+                console.log(suffix);
+
+                //2.4统一转小写
+                var lower_suffix = suffix.toLowerCase();
+                console.log(lower_suffix);
+                //2.5判断
+                if(lower_suffix === '.jpg' || lower_suffix === '.png' || lower_suffix === '.jpeg' || lower_suffix === '.gif'){
+                    alert('上传图片正确');
+                }else{
+                    alert('上传图片错误');
+                }
+            }
+        }
+    </script>
+</body>
+</html>
