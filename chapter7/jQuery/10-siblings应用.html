@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>siblings应用</title>
+</head>
+<body>
+    <ul>
+        <li>what</li>
+        <li class="active">how</li>
+        <li class="active">where</li>
+        <li>when</li>
+        <li>go</li>
+        <li>fuck</li>
+    </ul>
+    <!--siblings()返回被选元素的所有同级元素-->
+    <script type="text/javascript" src="jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $('ul li').click(function () {
+//            var a = $(this).css('color', 'red');
+//            console.log(a);
+//            a.siblings('li').css('color', 'black');
+            $(this).css('color', 'red').siblings('li').css('color', 'black');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义动画</title>
+    <style type="text/css">
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            bottom:0;
+            left:0;
+        }
+    </style>
+</head>
+<body>
+    <button>动画</button>
+    <div></div>
+    <script type="text/javascript" src="jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('button').click(function () {
+                //animate(队列的属性，时间，fn回调函数)
+                var json = {
+                    width:200,
+                    height:200,
+                    top:200,
+                    right:500,
+                    'border-radius':100
+                };
+
+                var json2 = {
+                    width:0,
+                    height:0,
+                    top:0,
+                    right:0
+                };
+
+                $('div').stop().animate(json, 2000, function () {
+                    $('div').animate(json2, 1000, function () {
+                       alert('已经完成');
+                    });
+                });
+            });
+        })
+    </script>
+</body>
+</html>
