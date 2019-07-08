@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>siblings用法</title>
+</head>
+<body>
+    <ul>
+        <li>what</li>
+        <li class="active">how</li>
+        <li class="active">where</li>
+        <li>when</li>
+        <li>go</li>
+        <li>fuck</li>
+    </ul>
+    <!--siblings()返回被选元素的所有同级元素-->
+    <script type="text/javascript" src="jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        var lis = $('ul li').eq(0).siblings('.active');
+        console.log(lis);
+    </script>
+</body>
+</html>

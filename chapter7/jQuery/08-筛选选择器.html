@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>筛选选择器</title>
+</head>
+<body>
+    <div class="box">
+        <p>
+            <a class="child" href="#">11111111111</a>
+        </p>
+        <p>
+            <span class="active">22222222222</span>
+        </p>
+        <p class="item3">33333333333</p>
+        <p>44444444444</p>
+        <p>555555555555</p>
+        <p>666666666666</p>
+        <div class="child">哈哈哈哈哈哈</div>
+    </div>
+    <script type="text/javascript" src="jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            // find(selector)
+            // 查找后代 包括子子孙孙
+            $('.box').find('p').css('color', 'red');
+            $('.box').find('.item3').css('color', 'blue');
+
+            //在jQuery中叫链式编程 就因为有这个链式编程 所以我们书写的就少
+            $('.box').find('p>.active').css('color', 'yellow').click(function () {
+                alert($(this).text());
+            });
+
+            //子代children（）
+            $('.box').children('.child').css('color','purple');
+
+            //parent 父代
+
+            //eq(index) index 从0开始
+            $('.box').children('p').eq(1).css({
+                'backgroundColor': 'green',
+                'font-size':20
+            })
+        })
+    </script>
+
+</body>
+</html>

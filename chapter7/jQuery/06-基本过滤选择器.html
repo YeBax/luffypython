@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本过滤选择器</title>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <script type="text/javascript" src="jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //写法 $('ul li:eq(0)')
+            //1.eq(index) 选择序号为index的元素
+            $('ul li:eq(0)').css('background', 'red');
+            $('ul li:gt(0)').css('color', 'green');
+            $('ul li:lt(3)').css('color', 'yellow');
+
+            //选取的奇数
+            $('ul li:odd').css('background', 'black');
+
+            //选取的偶数
+            $('ul li:even').css('background', 'green');
+
+            //选取 第一个 和 最后一个
+            $('ul li:first').css('color', 'blue');
+            $('ul li:last').css('color', 'orange');
+
+        });
+
+
+
+    </script>
+
+</body>
+</html>
