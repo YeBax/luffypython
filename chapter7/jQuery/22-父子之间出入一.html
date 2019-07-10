@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div class="news">新闻</div>
+    <div class="box"></div>
+
+    <script type="text/javascript" src="jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var oP = document.createElement('p');
+            oP.innerHTML = '插入新的内容';
+
+            //1.父子之间  父.append(子)  子.appendTo(父)
+
+            // 子元素：可以是一个string、jsDOM对象、jquery对象
+            /*
+            $('.box') .append('alex'); // 可以插入普通的文本
+            $('.box') .append('<h2>haha</h2>'); // 可以插入的标签+文本
+            $('.box') .append(oP); //插入一个jsDom对象
+            $('.box').append($('.news')); //如果插入的是一个jquery对象 相当于是一个移动操作
+            */
+//            $('<p>草天</p>').appendTo('.box'); //链式编程 使用这个方式
+            $('<p>草天</p>').appendTo('.box').click(function () {
+                $(this).css({
+                    width:100,
+                    height:100,
+                    backgroundColor:'red'
+                }).text('全栈工程师')
+            });
+            // 链式编程 简化了我们的代码
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>样式的操作</title>
+    <style type="text/css">
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+        .hidden{
+
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">隐藏</button>
+    <div class="box hidden"></div>
+    <script type="text/javascript" src="jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var isShow = true;
+            $('#btn').click(function () {
+                /*
+                1.通过控制类的样式属性对盒子显示隐藏
+                if(isShow){
+                    $('.box').css('display', 'none');
+                    isShow = false;
+                    $(this).text('显示');
+                }else{
+                    $('.box').css('display', 'block');
+                    isShow = true;
+                    $(this).text('隐藏');
+                }
+                */
+
+                //2.通过控制类名 addClass() removeClass()
+                // 记住 如果是操作类名  一定要使用 addClass 和 removeClass 不要使用attr()
+                if(isShow){
+                    $('.box').addClass('hidden');
+//                    $('.box').addClass('hidden aaaa bbbb cccc ddddd'); //多个
+                    isShow = false;
+                    $(this).text('显示');
+                }else{
+                    $('.box').removeClass('hidden');
+                    isShow = true;
+                    $(this).text('隐藏');
+                }
+            });
+
+        })
+    </script>
+
+</body>
+</html>
