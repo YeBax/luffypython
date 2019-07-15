@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标签的属性操作</title>
+    <style type="text/css">
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <a href=""></a>
+    <div title="alex">百度一下</div>
+    <script type="text/javascript" src="jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        /*
+        1.样式属性操作 css('color')获取值
+        css('color', 'red')设置单个值
+        css({
+                key1:value1,
+                key2:value2,
+                key3:value3
+           })
+          key 既可以是驼峰 也可以是margin-left 要加引号
+
+         2.标签的属性操作
+         attr(key) 获取属性值
+         attr(key,value) 设置单个值
+         attr({key1:value1,key2:value2}) 设置多个值
+
+         3.DOM对象属性操作
+
+         4.类样式属性操作
+         addClass()  removeClass()  toggleClass()
+
+         5.对值的操作
+         text()  html() val()
+
+         innerTest
+         innerHTML
+         value.
+
+        6.对DOM的操作 CRUD
+         */
+
+        // js:
+        // setAttribute(key,value)
+        //getAttribute
+
+
+        //jquery
+        $(function() {
+            //获取属性值  attr()
+            var t = $('div').attr('title');
+            console.log(t);
+
+            $('div').attr('id','box');
+
+            //设置属性的时候 不要使用此方式来设置类名
+            $('div').attr('class','box1 box2');
+
+            $('a').attr({
+                'href':'http://www.baidu.com',
+                'title':'aaaa'
+            });
+
+            //移除 标签的属性
+            $('div').removeAttr('title id');
+
+        });
+    </script>
+
+</body>
+</html>
