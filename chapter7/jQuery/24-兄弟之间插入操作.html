@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <ul>
+        <li class="item">hello my world</li>
+    </ul>
+
+    <script type="text/javascript" src="jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            // 兄弟元素.after(要插入的兄弟元素)
+            //要插入的兄弟元素.insertAfter(兄弟元素)
+
+            //es6 的模版字符串  tab键上的反引号 `` , 使用${变量名} 插入变量
+            var title = "百度一下";
+            $('.item').after(`<li>
+            <a href="#">${title}</a>
+        </li>`)
+
+            $('<li>一个新元素</li>').insertAfter('.item');
+
+            // before() insertBefore（）
+
+            $('.item').before(`<li>插入在前面一个元素</li>`);
+            $('<li>一个新元素在前面</li>').insertBefore('.item');
+        })
+    </script>
+
+</body>
+</html>
