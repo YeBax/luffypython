@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+        <style type="text/css">
+            *{
+                padding:0;
+                margin:0;
+            }
+
+            .commentBtn{
+                font-size: 30px;
+                color: #ffffff;
+            }
+
+            .box{
+                width: 300px;
+                background-color: red;
+                position:relative;
+                line-height: 70px;
+                text-align: center;
+            }
+
+            .comment{
+                position: relative;
+                width: 300px;
+                height: 500px;
+                background-color: yellow;
+            }
+
+            .comment span.close{
+                position: absolute;
+                right:0;
+                top:0;
+                color: black;
+                cursor:pointer;
+            }
+
+            .comment button.shouQi{
+                position: absolute;
+                bottom:0;
+                right:0;
+            }
+
+
+        </style>
+</head>
+<body>
+    <div class="box">
+        <span class="commentBtn">评论</span>
+        <div class="comment" style="display: none;">
+            <span class="close active">X</span>
+            <button class="shouQi active">收起</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //点击评论 展开评论列表
+            $('.commentBtn').click(function (e) {
+//                $('.comment').stop().slideDown(200);
+                e.stopPropagation(); //防止冒泡
+                $('.comment').delay(200).slideDown(500);
+            });
+
+            $('.comment span.active, .comment button.active').click(function (e) {
+                e.stopPropagation(); //防止冒泡
+                $('.comment').delay(200).slideUp(500);
+            });
+
+            $('body').click(function (e) {
+                e.stopPropagation(); //防止冒泡
+                $('.comment').delay(200).slideUp(500);
+            })
+        })
+    </script>
+
+
+</body>
+</html>
