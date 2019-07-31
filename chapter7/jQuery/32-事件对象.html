@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <button>按钮</button>
+    <input type="text" name="user" value="123">
+    <p class="content"></p>
+    <script type="text/javascript" src="jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //jquery 中没有监听输入框 输入内容的方法
+//            $('input').change(function (e) {
+//                console.log(e.target.value);
+//            });
+
+            $('.content').text($('input').val());
+
+            // 原生oninput的事件
+
+            //双向的数据绑定   单向数据绑定（data ==》 view）
+            $('input')[0].oninput = function (e) {
+                console.log(e.target.value);
+                $('.content').text(e.target.value);
+            };
+
+            $('button').click(function (e) {
+                console.log(e.currentTarget);
+                //事件的触发对象 js对象
+                console.log(e.target);
+
+                console.log(e.target.innerHTML);
+                console.log($(e.target).text());
+
+
+                //在使用 事件的时候  99%都需要 阻止冒泡
+                e.stopPropagation();
+            });
+
+            $('body').click(function (e) {
+                console.log(e.currentTarget);
+                console.log(e.target);
+            });
+
+            $('html').click(function (e) {
+                console.log(e.currentTarget);
+                console.log(e.target);
+            });
+        });
+    </script>
+</body>
+</html>

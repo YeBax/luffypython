@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>替换操作</title>
+</head>
+<body>
+    <div class="box">
+        <h2>tom</h2>
+        <h2>alex</h2>
+        <h3>linda</h3>
+
+    </div>
+    <script type="text/javascript" src="jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            // 页面中获取的DOM对象.replaceWith(替换的内容)
+            $('h2').replaceWith('<span>替换个girl</span>');
+
+            // replaceAll
+            $('<p style="color:red">黑菇凉</p>').replaceAll('span')
+        });
+    </script>
+</body>
+</html>
