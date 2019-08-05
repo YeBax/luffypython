@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- 媒体查询 视口设置-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>组件</title>
+    <!-- Bootstrap -->
+    <link href="./bootstrap-3.3.7/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        .ttt{
+            position: relative;
+            top:-10px;
+        }
+    </style>
+  </head>
+<body>
+    <div class="container">
+        <div class="row project">
+            <div class="col-md-4">
+                <div class="thumbnail" style="height: 350px">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">下拉菜单</div>
+                          <div class="panel-body">
+                            <ol class="breadcrumb">
+                              <li><a href="#">Home</a></li>
+                              <li><a href="#">Library</a></li>
+                              <li class="active">Data</li>
+                            </ol>
+                          </div>
+                    </div>
+                            <nav aria-label="Page navigation">
+                              <ul class="pagination pagination-lg">
+                                <li>
+                                  <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                  </a>
+                                </li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li class="disabled"><a href="#">5</a></li>
+                                <li>
+                                  <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </nav>
+            </div>
+        </div>
+            <div class="col-md-4">
+                <div class="thumbnail" style="height: 350px">
+                    <h3>Example heading <span class="label label-default ttt">New</span></h3>
+                    <a href="#">Inbox <span class="badge">42</span></a>
+
+                    <button class="btn btn-primary" type="button">
+                      Messages <span class="badge">10</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="jumbotron">
+                  <h1>Hello, world!</h1>
+                  <p>你好这是什么什么什么公司。。。。</p>
+                  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6 col-md-3">
+                    <a href="#" class="thumbnail">
+                      <img src="..." alt="...">
+                    </a>
+                  </div>
+                  ...
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="..." alt="...">
+                  <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>的士大夫撒放松放松放松放松放松的无缝发过火沙发斯蒂芬水电费水电费是是否是否水电费问题感受到</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row project">
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">警告框和进度条</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="alert alert-success" role="alert"> <a href="#" class="alert-link">成功了啊啊啊啊啊啊啊</a></div>
+                            <div class="alert alert-info" role="alert">这条信息</div>
+                            <div class="alert alert-warning" role="alert">警告</div>
+                            <div class="alert alert-danger" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>报错了！！！！
+                            </div>
+
+                            <div class="progress">
+                              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
+                                <span class="sr-only">60% Complete</span>
+                              </div>
+                            </div>
+
+                            <div class="progress">
+                              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                                100%
+                              </div>
+                            </div>
+
+                            <div class="progress">
+                              <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                  40%
+                              </div>
+                            </div>
+
+                            <div class="progress">
+                              <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                <span class="sr-only">80% Complete (danger)</span>
+                              </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                        <div class="media">
+                          <div class="media-left">
+                            <a href="#">
+                              <img class="media-object" src="..." alt="...">
+                            </a>
+                          </div>
+                          <div class="media-body">
+                            <h4 class="media-heading">这是一个标题</h4>
+                            内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+                          </div>
+                        </div>
+
+                    <div class="list-group">
+                      <a href="#" class="list-group-item active">
+                        Cras justo odio
+                      </a>
+                      <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+                      <a href="#" class="list-group-item">Morbi leo risus</a>
+                      <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                      <a href="#" class="list-group-item">Vestibulum at eros</a>
+                    </div>
+                </div>
+                <div class="row project">
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                          <!-- Default panel contents -->
+                          <div class="panel-heading">带有列表的面板</div>
+                          <div class="panel-body">
+                            <p>面板内容面板内容面板内容面板内容面板内容面板内容面板内容面板内容面板内容面板内容面板内容面板内容面板内容面板内容面板内容</p>
+                          </div>
+
+                          <!-- Table -->
+                          <table class="table table-striped table-hover table-bordered ">
+                                <tr class="">
+                                    <td>id</td>
+                                    <td>name</td>
+                                    <td>age</td>
+                                </tr>
+                                <tr class="info">
+                                    <td>1</td>
+                                    <td>张珊</td>
+                                    <td>18</td>
+                                </tr>
+                                <tr class="success">
+                                    <td>2</td>
+                                    <td>李思</td>
+                                    <td>19</td>
+                                </tr>
+                                <tr class="warning">
+                                    <td>3</td>
+                                    <td>王武</td>
+                                    <td>28</td>
+                                </tr>
+                                <tr class="danger">
+                                    <td>4</td>
+                                    <td>哈奇</td>
+                                    <td>25</td>
+                                </tr>
+                                <tr class="active">
+                                    <td>5</td>
+                                    <td>小豆</td>
+                                    <td>23</td>
+                                </tr>
+                                <tr class="">
+                                    <td>5</td>
+                                    <td>小豆小豆小豆小豆小豆小豆小豆小豆小豆小豆小豆小豆小豆小豆小豆小豆小豆小豆小豆小豆小豆小豆小豆小豆</td>
+                                    <td>23</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+</body>
+  <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+</html>

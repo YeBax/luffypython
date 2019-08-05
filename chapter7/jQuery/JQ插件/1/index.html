@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>canvas点击效果</title>
+<style>
+		body{background-color: #232323;color: aliceblue}
+        #mineCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        .title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+<canvas id="mineCanvas"></canvas>
+<p class="title">鼠标点击任意位置</p>
+<script src="./index.js"></script>
+</body>
+</html>
